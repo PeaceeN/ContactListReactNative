@@ -31,7 +31,7 @@ export default props => {
                 <Button
                     onPress={() => confirmUserDeletion(user)}
                     type="clear"
-                    icon={<Icon name="delet" size={25} color="red" />}
+                    icon={<Icon name="delete" size={25} color="red" />}
                 />
             </>
         )
@@ -41,7 +41,7 @@ export default props => {
         return (
             <ListItem
                 leftAvatar={{source: {uri: user.avatarUrl}}}
-                key={user.id}
+                key={user.id.toString()}
                 title={user.name}
                 subtitle={user.email}
                 bottomDivider
